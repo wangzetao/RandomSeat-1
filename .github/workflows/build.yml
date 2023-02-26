@@ -191,6 +191,7 @@ jobs:
 
   release:
     needs: [build]
+    steps: 
       # step7: create release
       - name: release
         uses: softprops/action-gh-release@v1
