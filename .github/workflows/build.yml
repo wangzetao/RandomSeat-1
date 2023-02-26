@@ -191,6 +191,7 @@ jobs:
 
   release:
     needs: [build]
+    runs-on: ubuntu-latest
     steps: 
       # step7: create release
       - name: release
