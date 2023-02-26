@@ -198,18 +198,25 @@ jobs:
         with:
           draft: true
           files: |
-            out/**
-            out/**/*.deb
-            out/**/*.dmg
-            out/**/*setup*.exe
-            out/**/*.nupkg
-            out/**/*.rpm
-            out/**/*.zip
-            out/**/RELEASES
-            out\**\*.deb
-            out\**\*.dmg
-            out\**\*setup*.exe
-            out\**\*.nupkg
-            out\**\*.rpm
-            out\**\*.zip
-            out\**\RELEASES
+            out/**.deb
+            out/**.dmg
+            out/**Setup*.exe
+            out/**.nupkg
+            out/**.rpm
+            out/**.zip
+            out/**RELEASES
+
+          # out/**/*.deb
+          # out/**/*.dmg
+          # out/**/*setup*.exe
+            # out/**/*.nupkg
+            # out/**/*.rpm
+            # out/**/*.zip
+            # out/**/RELEASES
+            # out\**\*.deb
+            # out\**\*.dmg
+            # out\**\*setup*.exe
+            # out\**\*.nupkg
+            # out\**\*.rpm
+            # out\**\*.zip
+            # out\**\RELEASES
