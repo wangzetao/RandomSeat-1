@@ -116,8 +116,8 @@ name: Build Electron App
 # Workflow's trigger
 on:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      main
 
 # Workflow's jobs
 jobs:
@@ -196,6 +196,7 @@ jobs:
         with:
           draft: true
           files: |
+            out/**
             out/**/*.deb
             out/**/*.dmg
             out/**/*setup*.exe
