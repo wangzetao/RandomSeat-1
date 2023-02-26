@@ -112,6 +112,8 @@
 
 # Workflow's name
 name: Build Electron App
+permissions:
+  contents: write
 
 # Workflow's trigger
 on:
