@@ -203,3 +203,10 @@ jobs:
             out/**/*.rpm
             out/**/*.zip
             out/**/RELEASES
+            out\**\*.deb
+            out\**\*.dmg
+            out\**\*setup*.exe
+            out\**\*.nupkg
+            out\**\*.rpm
+            out\**\*.zip
+            out\**\RELEASES
