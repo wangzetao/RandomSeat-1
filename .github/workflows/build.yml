@@ -193,6 +193,8 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps: 
+      - name: test
+        run: ls -R
       # step7: create release
       - name: release
         uses: softprops/action-gh-release@v1
