@@ -124,9 +124,9 @@ on:
 # Workflow's jobs
 jobs:
   # job's id
-  release:
+  build:
     # job's name
-    name: build and release electron app
+    name: build electron app
 
     # the type of machine to run the job on
     runs-on: ${{ matrix.os }}
@@ -189,6 +189,8 @@ jobs:
       #     name: ${{ matrix.os }}
       #     path: dist_electron
 
+  release:
+    needs: [build]
       # step7: create release
       - name: release
         uses: softprops/action-gh-release@v1
@@ -198,13 +200,13 @@ jobs:
         with:
           draft: true
           files: |
-            out/**.deb
-            out/**.dmg
-            out/**Setup*.exe
-            out/**.nupkg
-            out/**.rpm
-            out/**.zip
-            out/**RELEASES
+            **out**.deb
+            **out**.dmg
+            **out**Setup*.exe
+            **out**.nupkg
+            **out**.rpm
+            **out**.zip
+            **out**RELEASES
 
           # out/**/*.deb
           # out/**/*.dmg
